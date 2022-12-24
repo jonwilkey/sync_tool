@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "sync_tool"
+version = "0.1.0"
+description = "Sync local and remote files in S3"
+authors = ["Jon Wilkey <jon.wilkey@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.26.37"
+click = "^8.1.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipython = "^8.7.0"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+
+[tool.poetry.scripts]
+sync_tool = 'sync_tool.cli:run'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

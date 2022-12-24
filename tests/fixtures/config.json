@@ -1,0 +1,5 @@
+{
+    "local_to_s3_paths": {
+        "s3://fake-bucket/mock-key": "/mnt/c/some_directory"
+    }
+}
