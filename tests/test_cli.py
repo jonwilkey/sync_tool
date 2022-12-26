@@ -1,4 +1,4 @@
-from base_test_framework import BaseTest
+from tests.base_test_framework import BaseTest
 from click.testing import CliRunner
 
 from sync_tool.cli import run

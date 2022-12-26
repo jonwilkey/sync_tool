@@ -1,7 +1,10 @@
-import click
-import logging
-from sync_tool.config import load_config
+"""Module for sync_tool CLI."""
 
+import logging
+
+import click
+
+from sync_tool.config import load_config
 
 log = logging.getLogger()
 
@@ -18,7 +21,7 @@ def run(up: bool, down: bool, config_file: str) -> None:
             raise ValueError("Please specify either --up or --down, not both")
         else:
             raise ValueError("Please specify either --up or --down")
-    load_config(config_file)
+    load_config(config_file=config_file, direction="up" if up else "down")
     log.info("Starting sync")
 
 
