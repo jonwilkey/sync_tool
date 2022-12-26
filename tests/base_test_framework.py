@@ -14,4 +14,4 @@ class BaseTest(TestCase):
         return patch_obj
 
     def _get_fixture_path(self, fixture: str) -> str:
-        return os.path.join(os.getcwd().split("tests")[0], "tests/fixtures", fixture)
+        return os.path.join(os.getcwd().split("tests")[0], "tests", "fixtures", fixture)

@@ -12,6 +12,7 @@ class Config:
     :param s3_bucket: Name of S3 bucket to sync with
     :param direction: Direction to sync, either "up" or "down"
     """
+
     local_to_s3_paths: dict[str, str]
     s3_bucket: str
     direction: str

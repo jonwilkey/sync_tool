@@ -1,6 +1,7 @@
 {
     "local_to_s3_paths": {
-        "/mnt/c/some_directory": "mock/key"
+        "/tests/fixtures/mock_local/stuff/": "stuff",
+        "/tests/fixtures/mock_local/things/": "things"
     },
     "s3_bucket": "fake-bucket"
 }
