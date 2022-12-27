@@ -2,11 +2,11 @@ import os
 import tempfile
 
 import boto3
-from tests.base_test_framework import BaseTest
 from moto import mock_s3
 
 from sync_tool.hash import get_sha256
 from sync_tool.s3 import _chunk_list, delete_files, download_file, get_keys, upload_file
+from tests.base_test_framework import BaseTest
 
 
 @mock_s3
@@ -16,12 +16,6 @@ class TestS3(BaseTest):
     def setUp(self) -> None:
         """Setup test fixtures."""
         super().setUp()
-        # Ensure that any environment variables with actual AWS credentials are mocked
-        os.environ["AWS_ACCESS_KEY_ID"] = "testing"
-        os.environ["AWS_SECRET_ACCESS_KEY"] = "testing"
-        os.environ["AWS_SECURITY_TOKEN"] = "testing"
-        os.environ["AWS_SESSION_TOKEN"] = "testing"
-        os.environ["AWS_DEFAULT_REGION"] = "us-east-1"
 
         # Create test bucket and upload one file
         self.bucket = "test_bucket"

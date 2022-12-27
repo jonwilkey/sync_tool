@@ -1,6 +1,5 @@
-from tests.base_test_framework import BaseTest
-
 from sync_tool.hash import get_sha256
+from tests.base_test_framework import BaseTest
 
 
 class TestHash(BaseTest):

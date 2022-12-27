@@ -1,7 +1,7 @@
-from tests.base_test_framework import BaseTest
 from click.testing import CliRunner
 
 from sync_tool.cli import run
+from tests.base_test_framework import BaseTest
 
 
 class TestCli(BaseTest):

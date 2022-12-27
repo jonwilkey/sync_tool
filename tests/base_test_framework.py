@@ -8,6 +8,13 @@ class BaseTest(TestCase):
         super().setUp()
         self.module_path = ""
 
+        # Ensure that any environment variables with actual AWS credentials are mocked
+        os.environ["AWS_ACCESS_KEY_ID"] = "testing"
+        os.environ["AWS_SECRET_ACCESS_KEY"] = "testing"
+        os.environ["AWS_SECURITY_TOKEN"] = "testing"
+        os.environ["AWS_SESSION_TOKEN"] = "testing"
+        os.environ["AWS_DEFAULT_REGION"] = "us-east-1"
+
     def _get_patch(self, target: str, *args, **kwargs) -> Mock:
         patch_obj = patch(self.module_path + target, autospec=True, *args, **kwargs)
         patch_obj.start()

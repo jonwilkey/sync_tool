@@ -1,8 +1,7 @@
 import json
 
-from tests.base_test_framework import BaseTest
-
 from sync_tool.config import Config, load_config
+from tests.base_test_framework import BaseTest
 
 
 class TestConfig(BaseTest):
